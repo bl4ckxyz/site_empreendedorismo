@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="logo.png"/>
+    <title>PR: Plástico Reciclável</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: auto;
+        }
+
+        body {
+            position: relative;
+            background-image: url(fundo.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .container button {
+            font-family: "Aleo", serif;
+            font-size: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao texto */
+        }
+
+        .subtitle {
+            text-align: center;
+            font-family: "Aleo", serif;
+            font-size: 60px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 30px;
+            padding: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao texto */
+        }
+
+        .accordion-button {
+            width: 80%;
+            max-width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background: transparent;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            transition: background 0.3s ease;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .accordion-button:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 0 15px;
+        }
+
+        .accordion-button.active + .accordion-content {
+            max-height: 200px; 
+        }
+
+        .accordion-content p {
+            margin: 10px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        header {
+            width: auto;
+            height: auto;
+        }
+
+        header img {
+            margin-left: 85px;
+            margin-top: 10px;
+            width: 250px;
+            height: auto;
+        }
+    </style>
+    <script>
+        // Exibe um alerta quando a página for carregada
+        window.onload = function() {
+            alert("Bem-vindo(a) ao nosso site sobre conscientização do uso de plásticos!");
+            alert("A página a seguir é interativa, clique nos tópicos para mais informações");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="">
+        <div class="subtitle">Degradação ambiental plastificada</div>
+    </header>
+
+    <div class="container">
+        <button class="accordion-button">O problema do plástico</button>
+        <div class="accordion-content">
+            <p>Os resíduos plásticos são um problema ambiental significativo que afeta os ecossistemas em todo o mundo.</p>
+        </div>
+
+        <button class="accordion-button">A escala da produção de plástico</button>
+        <div class="accordion-content">
+            <p>A produção global de plástico atingiu 367 milhões de toneladas métricas anualmente, contribuindo fortemente para a geração de resíduos.</p>
+        </div>
+
+        <button class="accordion-button">Impacto na vida marinha</button>
+        <div class="accordion-content">
+            <p>Os resíduos plásticos nos oceanos representam uma grave ameaça à vida marinha, causando ingestão, emaranhamento e destruição do habitat.</p>
+            <img style="width: 500px; height: auto;" src="tartaruga-canudo.jpg" alt="">
+        </div>
+
+        <button class="accordion-button">Nosso objetivo</button>
+        <div class="accordion-content">
+            <p>Nosso objetivo é reduzir os resíduos plasticos e melhorar a sustentabilidade do meio ambiente.</p>
+            <p>Além de:</p>
+            <p>Reduzir a poluição ambiental: Diminuir a quantidade de plástico descartado incorretamente, que polui solos, rios e oceanos.</p>
+            <p>Promover a conscientização ambiental: Incentivar o público a adotar práticas mais sustentáveis e a reduzir o uso de plásticos descartáveis.</p>
+            <img style="width: 500px; height: auto;" src="plastico.png" alt="">
+        </div>
+
+        <button class="accordion-button">Legislação e Política</button>
+        <div class="accordion-content">
+            <p>Os governos de todo o mundo estão a implementar políticas para reduzir os resíduos plásticos, tais como proibições de plásticos descartáveis ​e incentivos à reciclagem.</p>
+        </div>
+
+        <button class="accordion-button">Estratégias de reciclagem e gestão</button>
+        <div class="accordion-content">
+            <p>Estratégias eficazes de gestão de resíduos, incluindo reciclagem, conversão de resíduos em energia e plásticos biodegradáveis, são essenciais para lidar com os resíduos plásticos.</p>
+        </div>
+
+        <button style="text-align: center;" class="accordion-button">Créditos:</button>
+        <div class="accordion-content">
+            <p>Lukas Oliveira (Desenvolvedor)</p>
+            <p>Lívia Turri (Ideias significantes)</p>
+            <p>Laura Minuti (Conselhos importantes)</p>
+            <p>Larissa Prado (Informações)</p>
+            <p>Mateus Camargo (Design)</p>
+            <p style="text-align: center;" >Obrigado por ler até aqui! ❤</p>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const activeButtons = document.querySelectorAll('.accordion-button.active');
+        activeButtons.forEach(activeButton => {
+            if (activeButton !== button) {
+                activeButton.classList.remove('active');
+                activeButton.nextElementSibling.style.maxHeight = null;
+            }
+        });
+        
+        button.classList.toggle('active');
+        const content = button.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+});
+    </script>
+</body>
+</html>
