@@ -113,6 +113,15 @@
             width: 250px;
             height: auto;
         }
+
+        @media only screen and (max-width: 768px) {
+        /* Apenas as imagens dentro do accordion */
+        .accordion-content img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        }
     </style>
     <script>
         // Exibe um alerta quando a página for carregada
@@ -142,7 +151,7 @@
         <button class="accordion-button">Impacto na vida marinha</button>
         <div class="accordion-content">
             <p>Os resíduos plásticos nos oceanos representam uma grave ameaça à vida marinha, causando ingestão, emaranhamento e destruição do habitat.</p>
-            <img style="width: 500px; height: auto;" src="tartaruga-canudo.jpg" alt="">
+            <img style="width: 500px; height: auto; border-radius: 25px;" src="tartaruga-canudo.jpg" alt="">
         </div>
 
         <button class="accordion-button">Nosso objetivo</button>
@@ -151,7 +160,7 @@
             <p>Além de:</p>
             <p>Reduzir a poluição ambiental: Diminuir a quantidade de plástico descartado incorretamente, que polui solos, rios e oceanos.</p>
             <p>Promover a conscientização ambiental: Incentivar o público a adotar práticas mais sustentáveis e a reduzir o uso de plásticos descartáveis.</p>
-            <img style="width: 500px; height: auto;" src="plastico.png" alt="">
+            <img style="width: 500px; height: auto; border-radius: 25px;" src="plastico.png" alt="">
         </div>
 
         <button class="accordion-button">Legislação e Política</button>
